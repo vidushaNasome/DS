@@ -1,0 +1,15 @@
+CREATE SCHEMA `sensor` ;
+
+
+use sensor;
+Create table user(id int primary key,login varchar(150),password varchar(150),login_status varchar(150));
+use sensor;
+
+insert into user values(1001,'amal','1234','log');
+insert into user values(1002,'nimal','1234','log');
+insert into user values(1003,'admin','1234','log');
+
+
+use sensor;
+Create table sensor(location varchar(100) primary key,activity varchar(15),smokelevel int,co2 int);
+
