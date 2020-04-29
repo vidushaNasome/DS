@@ -5,14 +5,16 @@ password-1234
 
 2.copy paste run the commands in New Text Document.txt in workbench
 
-3.temp_4_23
+3.REST-Master
+you can use rest executable jar rest.jar in Binaries folder and run it.
+
+4.temp_4_23
 run TemperatureSensorServer file in Binaries\TemperatureMonitor_Code folder. You can run this file only once.run desktop file in Binaries\TemperatureMonitor_Code using command propmt.
 you can run desktop files as much as you want.
 
 You have to have java install in your machine.
 
-4.REST-Master
-you can use rest executable jar rest.jar in Binaries folder and run it.
+
 
 5.inside Binaries\build folder have all the files that need to build the project.You can use this 
 https://create-react-app.dev/docs/deployment link to deployit in your server.
