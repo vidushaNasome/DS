@@ -88,7 +88,7 @@ public class Emal_msg extends javax.swing.JFrame implements Runnable{
     @Override
     public void run() {
         try {
-            Thread.sleep(5000);
+            Thread.sleep(10000);
             System.out.println("dispose jframe");
             this.dispose();
         } catch (InterruptedException ex) {

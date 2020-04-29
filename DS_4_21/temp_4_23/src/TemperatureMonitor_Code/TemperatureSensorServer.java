@@ -28,7 +28,7 @@ public class TemperatureSensorServer extends UnicastRemoteObject implements
 		TemperatureSensor, Runnable {
 
 	private static HttpURLConnection con;
-	//private ArrayList<TemperatureListener> list = new ArrayList<TemperatureListener>();
+	
         //Make ArrayList Synchronized inorder to add or get arraylist objects.
         List<TemperatureListener> list = Collections.synchronizedList(new ArrayList<TemperatureListener>());
         
@@ -116,7 +116,7 @@ public class TemperatureSensorServer extends UnicastRemoteObject implements
                          BufferedReader br=new BufferedReader(new InputStreamReader(im));
                         String line=br.readLine();
                         while(line != null){
-                            //System.out.println("displayig line....."+line);
+                          
                             
                             JSONArray jsonArr = new JSONArray(line);
 
@@ -142,9 +142,7 @@ public class TemperatureSensorServer extends UnicastRemoteObject implements
                                         ob.setHigh("Your smoke level is above or equals to 5.");
                                         this.notifyListeners(ob.getLocation());
                                     }
-                                }/*else{
-                                     this.notifyListeners("not_exceeded");
-                                }*/
+                                }
                                 
                                 System.out.println("data"+ob);
                                 String toStringVal=ob.toString();
@@ -158,7 +156,7 @@ public class TemperatureSensorServer extends UnicastRemoteObject implements
                     
                     
                  
-                 Thread.sleep(5000);
+                 Thread.sleep(15000);
                 
                 }
                 
@@ -183,7 +181,7 @@ public class TemperatureSensorServer extends UnicastRemoteObject implements
 	}
         @Override
         public String displaySensors() throws java.rmi.RemoteException{
-            //System.out.println("sensor list:"+sensorslist);
+            //Displaying all sensors details.
             String listString = String.join(", ", sensorslist);
             return listString;
         

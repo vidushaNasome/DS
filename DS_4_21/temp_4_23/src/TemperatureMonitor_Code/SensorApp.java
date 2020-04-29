@@ -242,9 +242,10 @@ public class SensorApp extends javax.swing.JFrame implements Runnable{
        System.out.println("#######"+location+" "+activity+" "+" Smokelevel:"+smokeLevel+" Co2level:"+co2+"####"+"\n");
        UpdateSensorMethod(activity, smokeLevel, co2, location);
         DisplaySensorMethod();
+        
        }
            try {
-               Thread.sleep(40000);
+               Thread.sleep(10000);
            } catch (InterruptedException ex) {
                Logger.getLogger(SensorApp.class.getName()).log(Level.SEVERE, null, ex);
            }
