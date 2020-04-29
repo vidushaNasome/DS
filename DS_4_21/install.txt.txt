@@ -1,0 +1,19 @@
+*********installation******
+1.temp_4_23
+copy and paste this folder in netbeans .need to add org.json.jar and my sql connector as externel jars
+
+2.REST-Master
+copy and paste this folder in eclipse.Need to delete the maven dependecies folder and update it.Need to add my sql connector jar file as externel library
+
+3.MySQL Workbench
+username-root
+password-1234
+
+4.copy paste run the commands in New Text Document.txt in workbench
+
+5.
+
+6.Run TemperatureSensorServer
+7.Run desktop
+8.Run web client
+
