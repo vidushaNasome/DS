@@ -6,7 +6,7 @@ password-1234
 2.copy paste run the commands in New Text Document.txt in workbench
 
 3.REST-Master
-you can use rest executable jar rest.jar in Binaries folder and run it.
+you can use rest executable jar rest123.jar in Binaries folder and run it.
 
 4.temp_4_23
 type these commands in cmd
