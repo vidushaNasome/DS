@@ -1,19 +1,26 @@
 *********installation******
-1.temp_4_23
-copy and paste this folder in netbeans .need to add org.json.jar and my sql connector as externel jars
-
-2.REST-Master
-copy and paste this folder in eclipse.Need to delete the maven dependecies folder and update it.Need to add my sql connector jar file as externel library
-
-3.MySQL Workbench
+1.MySQL Workbench
 username-root
 password-1234
 
-4.copy paste run the commands in New Text Document.txt in workbench
+2.copy paste run the commands in New Text Document.txt in workbench
 
-5.
+3.REST-Master
+you can use rest executable jar rest123.jar in Binaries folder and run it.
 
-6.Run TemperatureSensorServer
-7.Run desktop
-8.Run web client
+4.temp_4_23
+type these commands in cmd
+start rmiregistry
+in new cmd and go to current directry
+java TemperatureSensorServer
+in a new cmd and go to current directry
+java desktop
+you can run many desktop applications but only one server.
+
+You have to have java install in your machine.
+
+5.inside Binaries\build folder have all the files that need to build the project.You can use this 
+https://create-react-app.dev/docs/deployment link to deploy it in your server.
+
+
 
