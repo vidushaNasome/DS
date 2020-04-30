@@ -1,12 +1,15 @@
-*********installation******
+*********installation*********
 1.MySQL Workbench
 username-root
 password-1234
 
 2.copy paste run the commands in New Text Document.txt in workbench
 
-3.REST-Master
-you can use rest executable jar rest123.jar in Binaries folder and run it.
+3.REST-Master Springboot Application
+go inside DS_4_21\REST-master.zip_expanded\REST-master\target folder using cmd.
+run command java -jar REST-0.0.1-SNAPSHOT.jar
+To check whether this is working you can go to browser and type http://localhost:8080/user
+
 
 4.temp_4_23
 type these commands in cmd
