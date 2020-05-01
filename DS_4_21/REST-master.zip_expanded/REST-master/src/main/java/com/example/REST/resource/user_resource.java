@@ -21,7 +21,7 @@ public class user_resource {
 	
 	@Autowired
 	user_repositary u_m_r;
-	
+	//These methods can used by any applications.In order to retrieve details
 	@RequestMapping(value="/user")
 	public List<user> getAll(){
 		System.out.println("details");
