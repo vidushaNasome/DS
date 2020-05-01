@@ -23,7 +23,7 @@ public class sensor_resource {
 
 	@Autowired
 	sensor_repositary rep;
-	
+	//These methods can used by any applications.In order to retrieve details
 	@RequestMapping(value="/sensor")
 	public List<sensor> getAll(){
 		return rep.findAll();
