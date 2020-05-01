@@ -37,9 +37,7 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
      * Creates new form Desktop
      */
     private static final long serialVersionUID = 1L;
-    Connection con = null;
     
-    PreparedStatement ps = null;
     ArrayList<sensor> arr;
     /*private String y="";
     private String x="";*/
