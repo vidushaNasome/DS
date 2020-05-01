@@ -30,5 +30,6 @@ you can run many desktop applications but only one server.
 go inside web folder and type command in cmd as npm install  (this will take minutes).
 Then type npm start
 
-You can use this https://create-react-app.dev/docs/deployment link to get details about how to deploy it in your server.
+Web folder contains build folder , so you can deploy it easily.
+You can use this https://create-react-app.dev/docs/deployment link to get more details.
 
