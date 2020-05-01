@@ -6,7 +6,7 @@ class App extends Component {
             sensors: []
         }
     }
-
+ //Calling this method every 40 s to retrive the senosr data from rest api
     async componentDidMount() {
         try {
             setInterval(async () => {
@@ -19,6 +19,7 @@ class App extends Component {
             console.log(e);
         }
     }
+     //checking whether the smoke level or/and is above or equal to 5 and produce alert boxes
     highSml(smokelevel,co2){
         //alert('smoke level is high');
         if (smokelevel>=5 || co2>=5){
