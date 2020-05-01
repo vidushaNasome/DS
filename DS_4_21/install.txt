@@ -3,7 +3,7 @@
 username-root
 password-1234
 
-2.copy paste run the commands in New Text Document.txt in workbench
+2.copy paste run the commands in SQL_Quries.txt in workbench
 
 3.REST-Master Springboot Application
 go inside DS_4_21\REST-master.zip_expanded\REST-master\target folder using cmd.
