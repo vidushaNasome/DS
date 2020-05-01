@@ -5,22 +5,25 @@ password-1234
 
 2.copy paste run the commands in SQL_Quries.txt in workbench
 
+###You have to have java install in your machine.
 3.REST-Master Springboot Application
 go inside DS_4_21\REST-master.zip_expanded\REST-master\target folder using cmd.
 run command java -jar REST-0.0.1-SNAPSHOT.jar
 To check whether this is working you can go to browser and type http://localhost:8080/user
 
-
-4.temp Rmi_serever&client
-type these commands in cmd
+4.temp Rmi_serever_client
+Type these commands in cmd
 start rmiregistry
-in new cmd and go to current directry
-java TemperatureSensorServer
-in a new cmd and go to current directry
-java desktop
+
+Open a new cmd and go to current directry(\DS_4_21\Binaries\rmi_client_server)
+java -cp <path_to_jar_file>org.json.jar; TemperatureMonitor_Code.TemperatureSensorServer
+
+Open another  cmd and go to current directry(\DS_4_21\Binaries\rmi_client_server)
+java TemperatureMonitor_Code.Desktop
+
 you can run many desktop applications but only one server.
 
-You have to have java install in your machine.
+
 
 5.inside Binaries\build folder have all the files that need to build the project.You can use this 
 https://create-react-app.dev/docs/deployment link to get details about how to deploy it in your server.
