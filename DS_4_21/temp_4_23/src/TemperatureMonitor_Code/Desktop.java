@@ -23,7 +23,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-import util.Config;
 
 /**
  *
@@ -48,7 +47,7 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
    
     public Desktop() {
         initComponents();
-        con = (Connection) Config.getConnect();
+        
         //After Login as Admin this will be visible 
         adminpanel.setVisible(false);
         
@@ -71,7 +70,6 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
         email_msg = new javax.swing.JTextArea();
         adminpanel = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         jPanel3 = new javax.swing.JPanel();
         un = new javax.swing.JTextField();
         pw = new javax.swing.JTextField();
@@ -129,13 +127,6 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
             }
         });
 
-        jButton2.setText("Delete all Sensors");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout adminpanelLayout = new javax.swing.GroupLayout(adminpanel);
         adminpanel.setLayout(adminpanelLayout);
         adminpanelLayout.setHorizontalGroup(
@@ -143,17 +134,13 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
             .addGroup(adminpanelLayout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 186, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         adminpanelLayout.setVerticalGroup(
             adminpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(adminpanelLayout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(adminpanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 42, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -243,11 +230,6 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // This method is used to delete all the details in sensor table in order for easiness in the run time.
-        DeleteAllSensorsMethod();
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         try {
             // Creating a get Registry from TemperatureSensorServer registry.And check with the login credentials that is send by the TemperatureSensorServer.
@@ -325,7 +307,6 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
     private javax.swing.JLabel displaySensordetails;
     private javax.swing.JTextArea email_msg;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
@@ -382,23 +363,7 @@ public class Desktop extends javax.swing.JFrame  implements TemperatureListener,
             }
         }
     }
-    //This method is used for easiness for running the program.
-    private void DeleteAllSensorsMethod(){
-        
-        try {
-                
-                ps=con.prepareStatement("delete from sensor ");
-            
-                 ps.execute();
-        } catch (SQLException ex) {
-                 Logger.getLogger(SensorApp.class.getName()).log(Level.SEVERE, null, ex);
-             
-                
-                
-            }
     
-           
-    }
     //This method is called inside notifyListeners in TemperatureSENSORSERVER.
     @Override
     public void temperatureChanged(String loc) throws RemoteException {
