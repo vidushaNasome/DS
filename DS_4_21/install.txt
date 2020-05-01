@@ -25,8 +25,11 @@ you can run many desktop applications but only one server.
 
 
 
-5.inside Binaries\build folder have all the files that need to build the project.You can use this 
-https://create-react-app.dev/docs/deployment link to get details about how to deploy it in your server.
+5.inside web folder have  files that need to build the project.
 
+go inside web folder and type command in cmd as npm install  (this will take minutes).
+Then type npm start
 
+Web folder contains build folder , so you can deploy it easily.
+You can use this https://create-react-app.dev/docs/deployment link to get more details.
 
