@@ -33,6 +33,10 @@ public class sensor_resource {
 	public ResponseEntity<?> addSensorDetails(@RequestBody sensor s){
 		
 		rep.save(s);
+		//When updating checking whether the exceeding of level and simulating sending emails and massages 
+		if(s.getCo2()>=5 || s.getSmokelevel()>=5 ) {
+			System.out.println("Smoke levels and/or co2 levels are exceeding. Sending emails and massages.................");
+		}
 		return new ResponseEntity<String>("success",HttpStatus.OK);
 	}
 	
